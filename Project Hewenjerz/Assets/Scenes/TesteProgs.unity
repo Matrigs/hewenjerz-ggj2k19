@@ -348,7 +348,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   velocidadeX: 10
   interacao: 0
-  paineliteracao: {fileID: 0}
+  paineliteracao: {fileID: 1905574403}
 --- !u!1 &739560707
 GameObject:
   m_ObjectHideFlags: 0
@@ -983,7 +983,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &1905574404
 RectTransform:
   m_ObjectHideFlags: 0
