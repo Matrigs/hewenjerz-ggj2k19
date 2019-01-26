@@ -7,7 +7,8 @@ public class NPC : MonoBehaviour
     public bool arranhado = false;
     public bool interagido = false;
     public bool acariciado = false;
-    public int variacaoKarma;
+    public bool neutro = false;
+    public int variacaoKarma = 10;
 
     public int karma = 50;
     // Start is called before the first frame update
@@ -19,18 +20,29 @@ public class NPC : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if(arranhado == true)
+        if(interagido == false) 
         {
-            karma = karma - variacaoKarma;
-            arranhado = false;
-        }
+            if(arranhado == true)
+            {
+                karma = karma - variacaoKarma;
+                arranhado = false;
+                Debug.Log(karma);
+                interagido = true;
+            }
 
-        if (acariciado == true)
-        {
-            karma = karma + variacaoKarma;
-            acariciado = false;
+            if (acariciado == true)
+            {
+                karma = karma + variacaoKarma;
+                acariciado = false;
+                Debug.Log(karma);
+                interagido = true;
+            }
+
+            if(neutro == true)
+            {
+                neutro = false;
+                interagido = true;
+            }
         }
     }
-
-
 }
