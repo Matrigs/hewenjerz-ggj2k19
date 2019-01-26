@@ -10,6 +10,8 @@ public class Gato : MonoBehaviour
     public GameObject cama;
 
     public GameManager gameManager;
+
+	public Animator catAnim;
     public float velocidadeX = 10f;
     public bool interacao = false;
     private bool camab = false;
@@ -29,17 +31,20 @@ public class Gato : MonoBehaviour
             if (Input.GetKey("d"))
             {
                 //Debug.Log("aaaaaa");
+				catAnim.SetBool("Walk", true);
                 transform.Translate((velocidadeX * Time.deltaTime), 0, 0);
             }
 
             //ESQUERDA
             if (Input.GetKey("a"))
             {
-                transform.Translate((-velocidadeX * Time.deltaTime), 0, 0);
+				catAnim.SetBool("Walk", true);
+				transform.Translate((-velocidadeX * Time.deltaTime), 0, 0);
             }
         }
         if (paineliteracao.activeSelf)
         {
+			catAnim.SetBool("Walk", false);
             if (Input.GetKeyDown(KeyCode.DownArrow))
             {
                 paineliteracao.SetActive(false);
