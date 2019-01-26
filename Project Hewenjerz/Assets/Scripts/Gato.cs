@@ -7,6 +7,8 @@ public class Gato : MonoBehaviour
 {
     public List<NPC> NPCs;
     private NPC npc;
+
+    private bool count = false;
     public GameObject cama;
 
     public GameManager gameManager;
@@ -15,6 +17,10 @@ public class Gato : MonoBehaviour
     public float velocidadeX = 10f;
     public bool interacao = false;
     private bool camab = false;
+
+    private bool facingRight = false;
+
+    Vector3 X;
     public GameObject paineliteracao;
     // Start is called before the first frame update
     void Start()
@@ -33,6 +39,17 @@ public class Gato : MonoBehaviour
                 //Debug.Log("aaaaaa");
 				catAnim.SetBool("Walk", true);
                 transform.Translate((velocidadeX * Time.deltaTime), 0, 0);
+            if(facingRight == false)
+            {
+                 // Switch the way the player is labelled as facing
+                facingRight = !facingRight;
+
+                // Multiply the player's x local scale by -1
+                Vector3 theScale = transform.localScale;
+                theScale.x *= -1;
+                transform.localScale = theScale;
+            }                
+                
             }
 
             //ESQUERDA
@@ -40,6 +57,19 @@ public class Gato : MonoBehaviour
             {
 				catAnim.SetBool("Walk", true);
 				transform.Translate((-velocidadeX * Time.deltaTime), 0, 0);
+
+                if(facingRight == true)
+                {
+                    // Switch the way the player is labelled as facing
+                    facingRight = !facingRight;
+
+                    // Multiply the player's x local scale by -1
+                    Vector3 theScale = transform.localScale;
+                    theScale.x *= -1;
+                    transform.localScale = theScale;
+
+                }
+                    
             }
         }
         if (paineliteracao.activeSelf)
@@ -129,9 +159,17 @@ public class Gato : MonoBehaviour
         if(cama.name == other.name) 
         {
             camab = true;
-            if (Input.GetKeyDown(KeyCode.DownArrow))
+            foreach(NPC n in NPCs)
+            {
+                if(n.interagido == true) 
+                {
+                    count = true;
+                }
+            }
+            if (Input.GetKeyDown(KeyCode.DownArrow) && count == true)
             {
                 gameManager.mudadia = true;
+                count = false;
             }
         }
         Debug.Log(other);
