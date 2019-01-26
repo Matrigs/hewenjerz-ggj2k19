@@ -4,6 +4,8 @@ using UnityEngine;
 
 public class GameManager : MonoBehaviour
 {
+    public int fim;
+    private int dia = 1;
     public Gato gato;
     public List<NPC> NPCs;
 
@@ -21,9 +23,26 @@ public class GameManager : MonoBehaviour
         {
             foreach(NPC n in NPCs)
             {
+                if(n.karma >= n.limitBom)
+                {
+                    Debug.Log(n.name+" BOM");
+                }
+                else if(n.karma < n.limitRuim)
+                {
+                    Debug.Log(n.name+" Ruim");
+                }
+                else 
+                {
+                    Debug.Log(n.name+" Neutro");
+                }
                 n.interagido = false;
             }
+            dia++;
             mudadia = false;
+            if(dia >= fim) 
+            {
+                Debug.Log("FIM");
+            }
         }
     }
 }

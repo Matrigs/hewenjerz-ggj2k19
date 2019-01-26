@@ -4,6 +4,8 @@ using UnityEngine;
 
 public class NPC : MonoBehaviour
 {
+    public int limitBom;
+    public int limitRuim;
     public bool arranhado = false;
     public bool interagido = false;
     public bool acariciado = false;

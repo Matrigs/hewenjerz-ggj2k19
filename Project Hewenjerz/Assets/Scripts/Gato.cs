@@ -87,7 +87,7 @@ public class Gato : MonoBehaviour
                 npc = n;
              }
          }  
-        if(interacao == true && npc == other) 
+        if(interacao == true && npc.name == other.name && npc.interagido == false) 
         {
             if (Input.GetKeyDown(KeyCode.UpArrow))
             {
@@ -119,6 +119,7 @@ public class Gato : MonoBehaviour
                 interacao = false;
                 Debug.Log("Fechou");
             }
+            npc = null;
         }
         if(cama.name == other.name) 
         {
