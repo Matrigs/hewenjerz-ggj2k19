@@ -951,11 +951,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2df06a61640d1df4091ee38a4fbbb1eb, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  fim: 3
+  fim: 6
   gato: {fileID: 1137167678}
-  gatinho: {fileID: 0}
+  gatinho: {fileID: 7777143846682096234}
   NPCs:
   - {fileID: 661510724}
+  - {fileID: 903347560}
   mudadia: 0
 --- !u!1 &1462556933
 GameObject:
@@ -1708,6 +1709,12 @@ PrefabInstance:
       propertyPath: NPCs.Array.data[1]
       value: 
       objectReference: {fileID: 903347560}
+    - target: {fileID: 4171245048975512082, guid: f0db0f2a79e2a8f499f97c5ac1fb8b60,
+        type: 3}
+      propertyPath: fadeAnimator
+      value: 
+      objectReference: {fileID: 95505793901220312, guid: 9cc52489ba1d86b4c962cfcff65c695d,
+        type: 3}
     - target: {fileID: 488931173, guid: f0db0f2a79e2a8f499f97c5ac1fb8b60, type: 3}
       propertyPath: m_Layer
       value: 9
@@ -1783,6 +1790,11 @@ PrefabInstance:
       propertyPath: m_TagString
       value: Gatinho
       objectReference: {fileID: 0}
+    - target: {fileID: 7777143846895226638, guid: 8f2c044bebabeab4b86773996a8576e1,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 7777143846895226629, guid: 8f2c044bebabeab4b86773996a8576e1,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -1847,6 +1859,21 @@ PrefabInstance:
         type: 3}
       propertyPath: stalking
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7777143846895226625, guid: 8f2c044bebabeab4b86773996a8576e1,
+        type: 3}
+      propertyPath: inicioZ
+      value: -0.05
+      objectReference: {fileID: 0}
+    - target: {fileID: 7777143846895226625, guid: 8f2c044bebabeab4b86773996a8576e1,
+        type: 3}
+      propertyPath: inicioY
+      value: -1.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 7777143846895226625, guid: 8f2c044bebabeab4b86773996a8576e1,
+        type: 3}
+      propertyPath: inicioX
+      value: 3.58
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 8f2c044bebabeab4b86773996a8576e1, type: 3}

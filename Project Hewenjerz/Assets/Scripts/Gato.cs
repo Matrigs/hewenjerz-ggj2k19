@@ -169,13 +169,16 @@ public class Gato : MonoBehaviour
                 if(n.interagido == true) 
                 {
                     count = true;
+                    Debug.Log("count "+count);
                 }
             }
             if (Input.GetKeyDown(KeyCode.DownArrow) && count == true)
             {
+                count = false;
+                gameManager.mudadia = true;
 				fadeAnimator.SetTrigger("FadeOut");
 				StartCoroutine (fadeInDelayer());
-                count = false;
+                Debug.Log(count);
             }
         }
         Debug.Log(other);
@@ -188,8 +191,6 @@ public class Gato : MonoBehaviour
 	IEnumerator fadeInDelayer () {
 		yield return StartCoroutine (WaitForRealSeconds(1));
 		Time.timeScale = 1f;
-
-		gameManager.mudadia = true;
 
 		yield return StartCoroutine (WaitForRealSeconds(1));
 

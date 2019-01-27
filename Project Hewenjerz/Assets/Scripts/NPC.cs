@@ -12,7 +12,6 @@ public class NPC : MonoBehaviour
     public bool neutro = false;
     public int variacaoKarma = 10;
     public Stalker gatinho;
-
     public int karma = 50;
     // Start is called before the first frame update
     void Start()
@@ -25,6 +24,7 @@ public class NPC : MonoBehaviour
     {
         if(interagido == false) 
         {
+            Debug.Log("Entre porra caralho");
             if(arranhado == true)
             {
                 karma = karma - variacaoKarma;

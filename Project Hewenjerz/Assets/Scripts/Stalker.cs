@@ -8,6 +8,10 @@ public class Stalker : MonoBehaviour
     public Gato gato;
     public float offset = 0.5f;
 
+    public float inicioX;
+    public float inicioY;
+    public float inicioZ;
+
     // Start is called before the first frame update
     void Start()
     {

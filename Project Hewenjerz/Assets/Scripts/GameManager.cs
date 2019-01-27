@@ -37,9 +37,19 @@ public class GameManager : MonoBehaviour
                     Debug.Log(n.name+" Neutro");
                 }
                 n.interagido = false;
+                Debug.Log(n +" "+ n.interagido);
+                if(dia >= 2)
+                {
+                    if(n.tag == "Gatinho") 
+                    {
+                        n.gameObject.SetActive(true);
+                        n.gameObject.transform.position = new Vector3(gatinho.inicioX,gatinho.inicioY,gatinho.inicioZ);
+                    }
+                }
             }
             gatinho.stalking = false;
             dia++;
+            Debug.Log("dia: "+dia);
             mudadia = false;
             if(dia >= fim) 
             {
