@@ -79,7 +79,7 @@ MonoBehaviour:
   cama: {fileID: 0}
   gameManager: {fileID: 0}
   catAnim: {fileID: 0}
-  velocidadeX: 5
+  velocidadeX: 4
   interacao: 0
   paineliteracao: {fileID: 0}
 --- !u!1001 &8257827056561561023

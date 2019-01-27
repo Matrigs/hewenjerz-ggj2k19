@@ -14,6 +14,7 @@ public class Gato : MonoBehaviour
     public GameManager gameManager;
 
 	public Animator catAnim;
+	public Animator fadeAnimator;
     public float velocidadeX = 10f;
     public bool interacao = false;
     private bool camab = false;
@@ -172,7 +173,8 @@ public class Gato : MonoBehaviour
             }
             if (Input.GetKeyDown(KeyCode.DownArrow) && count == true)
             {
-                gameManager.mudadia = true;
+				fadeAnimator.SetTrigger("FadeOut");
+				StartCoroutine (fadeInDelayer());
                 count = false;
             }
         }
@@ -182,4 +184,23 @@ public class Gato : MonoBehaviour
     {
         camab = false;
     }
+
+	IEnumerator fadeInDelayer () {
+		yield return StartCoroutine (WaitForRealSeconds(1));
+		Time.timeScale = 1f;
+
+		gameManager.mudadia = true;
+
+		yield return StartCoroutine (WaitForRealSeconds(1));
+
+		fadeAnimator.SetTrigger ("FadeIn");
+		fadeAnimator.updateMode = AnimatorUpdateMode.Normal;
+	}
+
+	public static IEnumerator WaitForRealSeconds (float time) {
+		float start = Time.realtimeSinceStartup;
+		while (Time.realtimeSinceStartup < start + time) {
+			yield return null;
+		}
+	}
 }
