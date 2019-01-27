@@ -22,6 +22,7 @@ public class GameManager : MonoBehaviour
     {
         if(mudadia == true)
         {
+            dia++;
             foreach(NPC n in NPCs)
             {
                 if(n.karma >= n.limitBom)
@@ -38,17 +39,53 @@ public class GameManager : MonoBehaviour
                 }
                 n.interagido = false;
                 Debug.Log(n +" "+ n.interagido);
-                if(dia >= 2)
+                if(dia == 2) 
+                {
+                    if(n.tag == "Adolescente") 
+                    {
+                        n.gameObject.SetActive(true);
+                    }
+                }
+                if(dia == 3) 
                 {
                     if(n.tag == "Gatinho") 
                     {
                         n.gameObject.SetActive(true);
                         n.gameObject.transform.position = new Vector3(gatinho.inicioX,gatinho.inicioY,gatinho.inicioZ);
                     }
+                    if(n.tag == "Idoso") 
+                    {
+                        n.gameObject.SetActive(false);
+                    }
+                }
+                if(dia == 4) 
+                {
+                    if(n.tag == "Gatinho") 
+                    {
+                        n.gameObject.transform.position = new Vector3(gatinho.inicioX,gatinho.inicioY,gatinho.inicioZ);
+                    }
+                    if(n.tag == "Adolescente") 
+                    {
+                        n.gameObject.SetActive(false);
+                    }
+                }
+                if(dia == 5) 
+                {
+                    if(n.tag == "Gatinho") 
+                    {
+                        n.gameObject.transform.position = new Vector3(gatinho.inicioX,gatinho.inicioY,gatinho.inicioZ);
+                    }
+                    if(n.tag == "Adolescente") 
+                    {
+                        n.gameObject.SetActive(true);
+                    }
+                    if(n.tag == "Idoso") 
+                    {
+                        n.gameObject.SetActive(true);
+                    }
                 }
             }
             gatinho.stalking = false;
-            dia++;
             Debug.Log("dia: "+dia);
             mudadia = false;
             if(dia >= fim) 
