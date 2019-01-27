@@ -7,6 +7,7 @@ public class GameManager : MonoBehaviour
     public int fim;
     private int dia = 1;
     public Gato gato;
+    public Stalker gatinho;
     public List<NPC> NPCs;
 
     public bool mudadia = false;
@@ -37,6 +38,7 @@ public class GameManager : MonoBehaviour
                 }
                 n.interagido = false;
             }
+            gatinho.stalking = false;
             dia++;
             mudadia = false;
             if(dia >= fim) 

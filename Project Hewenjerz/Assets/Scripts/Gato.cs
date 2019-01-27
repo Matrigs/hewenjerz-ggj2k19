@@ -19,7 +19,7 @@ public class Gato : MonoBehaviour
     public bool interacao = false;
     private bool camab = false;
 
-    private bool facingRight = false;
+    public bool facingRight = false;
 
     Vector3 X;
     public GameObject paineliteracao;
@@ -29,7 +29,7 @@ public class Gato : MonoBehaviour
 
     }
 
-    // Update is called once per frame
+    // Update is called once per frameS
     void Update()
     {
         if (interacao == false)

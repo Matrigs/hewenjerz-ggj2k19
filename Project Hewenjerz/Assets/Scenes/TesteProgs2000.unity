@@ -728,6 +728,33 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ac0b09e7857660247b1477e93731de29, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!1 &903347559 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 7777143846895226638, guid: 8f2c044bebabeab4b86773996a8576e1,
+    type: 3}
+  m_PrefabInstance: {fileID: 7777143846682096233}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &903347560
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 903347559}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d1cf2097589363d47a3803d5dff3b886, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  limitBom: 0
+  limitRuim: 0
+  arranhado: 0
+  interagido: 0
+  acariciado: 0
+  neutro: 0
+  variacaoKarma: 10
+  gatinho: {fileID: 7777143846682096234}
+  karma: 50
 --- !u!114 &1137167678 stripped
 MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 4171245048975512082, guid: f0db0f2a79e2a8f499f97c5ac1fb8b60,
@@ -926,6 +953,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   fim: 3
   gato: {fileID: 1137167678}
+  gatinho: {fileID: 0}
   NPCs:
   - {fileID: 661510724}
   mudadia: 0
@@ -1648,7 +1676,7 @@ PrefabInstance:
     - target: {fileID: 4171245048975512082, guid: f0db0f2a79e2a8f499f97c5ac1fb8b60,
         type: 3}
       propertyPath: NPCs.Array.size
-      value: 1
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 4171245048975512082, guid: f0db0f2a79e2a8f499f97c5ac1fb8b60,
         type: 3}
@@ -1675,6 +1703,11 @@ PrefabInstance:
       propertyPath: NPCs.Array.data[0]
       value: 
       objectReference: {fileID: 661510724}
+    - target: {fileID: 4171245048975512082, guid: f0db0f2a79e2a8f499f97c5ac1fb8b60,
+        type: 3}
+      propertyPath: NPCs.Array.data[1]
+      value: 
+      objectReference: {fileID: 903347560}
     - target: {fileID: 488931173, guid: f0db0f2a79e2a8f499f97c5ac1fb8b60, type: 3}
       propertyPath: m_Layer
       value: 9
@@ -1733,3 +1766,99 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: f0db0f2a79e2a8f499f97c5ac1fb8b60, type: 3}
+--- !u!1001 &7777143846682096233
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 7777143846895226638, guid: 8f2c044bebabeab4b86773996a8576e1,
+        type: 3}
+      propertyPath: m_Name
+      value: Gatinho
+      objectReference: {fileID: 0}
+    - target: {fileID: 7777143846895226638, guid: 8f2c044bebabeab4b86773996a8576e1,
+        type: 3}
+      propertyPath: m_TagString
+      value: Gatinho
+      objectReference: {fileID: 0}
+    - target: {fileID: 7777143846895226629, guid: 8f2c044bebabeab4b86773996a8576e1,
+        type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 3.58
+      objectReference: {fileID: 0}
+    - target: {fileID: 7777143846895226629, guid: 8f2c044bebabeab4b86773996a8576e1,
+        type: 3}
+      propertyPath: m_LocalPosition.y
+      value: -1.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 7777143846895226629, guid: 8f2c044bebabeab4b86773996a8576e1,
+        type: 3}
+      propertyPath: m_LocalPosition.z
+      value: -0.05078125
+      objectReference: {fileID: 0}
+    - target: {fileID: 7777143846895226629, guid: 8f2c044bebabeab4b86773996a8576e1,
+        type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7777143846895226629, guid: 8f2c044bebabeab4b86773996a8576e1,
+        type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7777143846895226629, guid: 8f2c044bebabeab4b86773996a8576e1,
+        type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7777143846895226629, guid: 8f2c044bebabeab4b86773996a8576e1,
+        type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7777143846895226629, guid: 8f2c044bebabeab4b86773996a8576e1,
+        type: 3}
+      propertyPath: m_RootOrder
+      value: 11
+      objectReference: {fileID: 0}
+    - target: {fileID: 7777143846895226629, guid: 8f2c044bebabeab4b86773996a8576e1,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7777143846895226629, guid: 8f2c044bebabeab4b86773996a8576e1,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7777143846895226629, guid: 8f2c044bebabeab4b86773996a8576e1,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7777143846895226625, guid: 8f2c044bebabeab4b86773996a8576e1,
+        type: 3}
+      propertyPath: gato
+      value: 
+      objectReference: {fileID: 1137167678}
+    - target: {fileID: 7777143846895226625, guid: 8f2c044bebabeab4b86773996a8576e1,
+        type: 3}
+      propertyPath: stalking
+      value: 0
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 8f2c044bebabeab4b86773996a8576e1, type: 3}
+--- !u!114 &7777143846682096234 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 7777143846895226625, guid: 8f2c044bebabeab4b86773996a8576e1,
+    type: 3}
+  m_PrefabInstance: {fileID: 7777143846682096233}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 903347559}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2dd34ac86a7593542a7953b9cf214d6c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 

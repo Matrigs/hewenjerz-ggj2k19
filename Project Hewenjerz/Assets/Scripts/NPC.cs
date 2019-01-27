@@ -11,6 +11,7 @@ public class NPC : MonoBehaviour
     public bool acariciado = false;
     public bool neutro = false;
     public int variacaoKarma = 10;
+    public Stalker gatinho;
 
     public int karma = 50;
     // Start is called before the first frame update
@@ -30,6 +31,10 @@ public class NPC : MonoBehaviour
                 arranhado = false;
                 Debug.Log(karma);
                 interagido = true;
+                if(this.tag == "Gatinho") 
+                {
+                    //O gato pisca
+                }
             }
 
             if (acariciado == true)
@@ -38,12 +43,20 @@ public class NPC : MonoBehaviour
                 acariciado = false;
                 Debug.Log(karma);
                 interagido = true;
+                if(this.tag == "Gatinho") 
+                {
+                    gatinho.stalking = true;
+                }
             }
 
             if(neutro == true)
             {
                 neutro = false;
                 interagido = true;
+                if(this.tag == "Gatinho") 
+                {
+                    //Mia de volta
+                }
             }
         }
     }
