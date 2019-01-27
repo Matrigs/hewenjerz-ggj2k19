@@ -5,7 +5,7 @@ using UnityEngine;
 public class GameManager : MonoBehaviour
 {
     public int fim;
-    private int dia = 1;
+    public int dia = 1;
     public Gato gato;
     public Stalker gatinho;
     public List<NPC> NPCs;

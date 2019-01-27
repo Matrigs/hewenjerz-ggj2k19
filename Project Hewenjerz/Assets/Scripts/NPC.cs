@@ -12,6 +12,7 @@ public class NPC : MonoBehaviour
     public bool neutro = false;
     public int variacaoKarma = 10;
     public Stalker gatinho;
+    public GameManager gameManager;
     public int karma = 50;
     // Start is called before the first frame update
     void Start()
@@ -31,9 +32,33 @@ public class NPC : MonoBehaviour
                 arranhado = false;
                 Debug.Log(karma);
                 interagido = true;
-                if(this.tag == "Gatinho") 
+                if(gameManager.dia == 5)
+                    if(this.tag == "Gatinho") 
+                    {
+                        //O gato rouba leite
+                    }
+                    if(this.tag == "Idoso") 
+                    {
+                        //Animacao
+                    }
+                    if(this.tag == "Adolescente") 
+                    {
+                        //Animacao
+                    }
+                else 
                 {
-                    //O gato pisca
+                     if(this.tag == "Gatinho") 
+                    {
+                        //O gato pisca
+                    }
+                    if(this.tag == "Idoso") 
+                    {
+                        //Animacao
+                    }
+                    if(this.tag == "Adolescente") 
+                    {
+                        //Animacao
+                    }
                 }
             }
 
@@ -43,19 +68,72 @@ public class NPC : MonoBehaviour
                 acariciado = false;
                 Debug.Log(karma);
                 interagido = true;
-                if(this.tag == "Gatinho") 
+                if(gameManager.dia == 5) 
                 {
-                    gatinho.stalking = true;
+                     if(this.tag == "Gatinho") 
+                    {
+                        //Animacao
+                    }
+                    if(this.tag == "Idoso") 
+                    {
+                        //Animacao
+                    }
+                    if(this.tag == "Adolescente") 
+                    {
+                        //Animacao
+                    }
                 }
+                else 
+                {
+                    if(this.tag == "Gatinho") 
+                    {
+                        gatinho.stalking = true;
+                    }
+                    if(this.tag == "Idoso") 
+                    {
+                        //Animacao
+                    }
+                    if(this.tag == "Adolescente") 
+                    {
+                        //Animacao
+                    }
+                }
+                
             }
 
             if(neutro == true)
             {
                 neutro = false;
                 interagido = true;
-                if(this.tag == "Gatinho") 
+                if(gameManager.dia == 5) 
                 {
-                    //Mia de volta
+                    if(this.tag == "Gatinho") 
+                    {
+                        //Animacao
+                    }
+                    if(this.tag == "Idoso") 
+                    {
+                        //Animacao
+                    }
+                    if(this.tag == "Adolescente") 
+                    {
+                        //Animacao
+                    }
+                }
+                else 
+                {
+                    if(this.tag == "Gatinho") 
+                    {
+                        //Animacao
+                    }
+                    if(this.tag == "Idoso") 
+                    {
+                        //Animacao
+                    }
+                    if(this.tag == "Adolescente") 
+                    {
+                        //Animacao
+                    }
                 }
             }
         }
