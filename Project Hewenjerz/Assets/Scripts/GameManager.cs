@@ -5,6 +5,7 @@ using UnityEngine;
 public class GameManager : MonoBehaviour
 {
     public int fim;
+	public Animator camerAnim;
     public int dia = 1;
     public Gato gato;
     public Stalker gatinho;
@@ -95,6 +96,7 @@ public class GameManager : MonoBehaviour
             mudadia = false;
             if(dia >= fim) 
             {
+				camerAnim.SetBool ("Clear", true);
                 Debug.Log("FIM");
             }
         }
