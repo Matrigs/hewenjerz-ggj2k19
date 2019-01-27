@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 using UnityEngine.EventSystems;
+using UnityEngine.SceneManagement;
 
 public class Gato : MonoBehaviour
 {
@@ -196,10 +197,16 @@ public class Gato : MonoBehaviour
             if (Input.GetKeyDown(KeyCode.DownArrow) && count == true)
             {
                 count = false;
-                gameManager.mudadia = true;
-				fadeAnimator.SetTrigger("FadeOut");
-				StartCoroutine (fadeInDelayer());
-                Debug.Log(count);
+				if(gameManager.dia < 5) {
+	                gameManager.mudadia = true;
+					fadeAnimator.SetTrigger("FadeOut");
+					StartCoroutine (fadeInDelayer());
+	                Debug.Log(count);
+				}
+				else {
+					SceneManager.LoadScene("Credits");
+					Debug.Log("FIM");
+				}
             }
         }
         Debug.Log(other);

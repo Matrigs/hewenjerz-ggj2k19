@@ -8,7 +8,13 @@ EditorBuildSettings:
   - enabled: 0
     path: 
     guid: 00000000000000000000000000000000
-  - enabled: 1
+  - enabled: 0
     path: Assets/Scenes/TesteProgs2000.unity
     guid: fbe2b320453667c48bd94153dba04a93
+  - enabled: 1
+    path: Assets/Scenes/GDtestscene.unity
+    guid: 83a3a0eae82e28941bcc0b664eeb2cd2
+  - enabled: 1
+    path: Assets/Scenes/Credits.unity
+    guid: 8ea9c369f5780a042889c75c68a783a0
   m_configObjects: {}
