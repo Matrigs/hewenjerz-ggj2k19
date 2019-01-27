@@ -49,25 +49,25 @@ public class NPC : MonoBehaviour
                     }
                     if(this.tag == "Idoso") 
                     {
-                        bate.SetBool("Bate",true);
+                        bate.SetTrigger("Bate");
                     }
                     if(this.tag == "Adolescente") 
                     {
-                        veneno.SetBool("Veneno",true);
+					veneno.SetTrigger("Veneno");
                     }
                 else 
                 {
                      if(this.tag == "Gatinho") 
                     {
-                        arranha.SetBool("Arranha",true);
+						arranha.SetTrigger("Arranha");
                     }
                     if(this.tag == "Idoso") 
                     {
-                        afugenta.SetBool("Afugenta",true);
+						afugenta.SetTrigger("Afugenta");
                     }
                     if(this.tag == "Adolescente") 
                     {
-                        chutar.SetBool("Chutar",true);
+						chutar.SetTrigger("Chutar");
                     }
                 }
             }
@@ -86,7 +86,7 @@ public class NPC : MonoBehaviour
                     }
                     if(this.tag == "Idoso") 
                     {
-                        acaricia2.SetBool("Acaricia2", true);
+						acaricia2.SetTrigger("Acaricia2");
                     }
                     if(this.tag == "Adolescente") 
                     {
@@ -101,11 +101,11 @@ public class NPC : MonoBehaviour
                     }
                     if(this.tag == "Idoso") 
                     {
-                        resmunga.SetBool("Resmunga",true);
+						resmunga.SetTrigger("Resmunga");
                     }
                     if(this.tag == "Adolescente") 
                     {
-                        acaricia.SetBool("Acaricia",true);
+						acaricia.SetTrigger("Acaricia");
                     }
                 }
                 
@@ -119,11 +119,11 @@ public class NPC : MonoBehaviour
                 {
                     if(this.tag == "Gatinho") 
                     {
-                        mia.SetBool("Mia",true);
+						mia.SetTrigger("Mia");
                     }
                     if(this.tag == "Idoso") 
                     {
-                        resmunga.SetBool("Resmunga", true);
+						resmunga.SetTrigger("Resmunga");
                     }
                     if(this.tag == "Adolescente") 
                     {
@@ -134,15 +134,15 @@ public class NPC : MonoBehaviour
                 {
                     if(this.tag == "Gatinho") 
                     {
-                        mia.SetBool("Mia",true);
+						mia.SetTrigger("Mia");
                     }
                     if(this.tag == "Idoso") 
                     {
-                        resmunga.SetBool("Resmunga", true);
+						resmunga.SetTrigger("Resmunga");
                     }
                     if(this.tag == "Adolescente") 
                     {
-                        leit.SetBool("Leite", true);
+						leit.SetTrigger("Leite");
                     }
                 }
             }
