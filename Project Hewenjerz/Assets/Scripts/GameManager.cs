@@ -9,6 +9,8 @@ public class GameManager : MonoBehaviour
     public Gato gato;
     public Stalker gatinho;
     public List<NPC> NPCs;
+	public List<GameObject> Days;
+	public int currentCamera = 0;
 
     public bool mudadia = false;
     // Start is called before the first frame update
@@ -23,6 +25,9 @@ public class GameManager : MonoBehaviour
         if(mudadia == true)
         {
             dia++;
+			Days [currentCamera].SetActive (false);
+			currentCamera = currentCamera + 1;
+			Days [currentCamera].SetActive (true);
             foreach(NPC n in NPCs)
             {
                 if(n.karma >= n.limitBom)
