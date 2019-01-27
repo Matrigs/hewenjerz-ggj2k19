@@ -39,21 +39,20 @@ public class Gato : MonoBehaviour
                 //Debug.Log("aaaaaa");
 				catAnim.SetBool("Walk", true);
                 transform.Translate((velocidadeX * Time.deltaTime), 0, 0);
-            if(facingRight == false)
-            {
-                 // Switch the way the player is labelled as facing
-                facingRight = !facingRight;
+                if(facingRight == false)
+                {
+                    // Switch the way the player is labelled as facing
+                    facingRight = !facingRight;
 
-                // Multiply the player's x local scale by -1
-                Vector3 theScale = transform.localScale;
-                theScale.x *= -1;
-                transform.localScale = theScale;
-            }                
-                
+                    // Multiply the player's x local scale by -1
+                    Vector3 theScale = transform.localScale;
+                    theScale.x *= -1;
+                    transform.localScale = theScale;
+                }                
+               
             }
-
             //ESQUERDA
-            if (Input.GetKey("a"))
+            else if (Input.GetKey("a"))
             {
 				catAnim.SetBool("Walk", true);
 				transform.Translate((-velocidadeX * Time.deltaTime), 0, 0);
@@ -70,6 +69,11 @@ public class Gato : MonoBehaviour
 
                 }
                     
+            }
+            else
+            {
+                catAnim.SetBool("Walk", false);
+                transform.Translate(0, 0, 0);
             }
         }
         if (paineliteracao.activeSelf)
