@@ -297,6 +297,11 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 3287794671954942022, guid: 5e76d882fbfb3bf4ab4b5776562b4cfc,
+        type: 3}
+      propertyPath: gameManager
+      value: 
+      objectReference: {fileID: 1425691342}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 5e76d882fbfb3bf4ab4b5776562b4cfc, type: 3}
 --- !u!1 &180310002
@@ -2366,10 +2371,10 @@ Camera:
     width: 1
     height: 1
   near clip plane: 0.1
-  far clip plane: 50
+  far clip plane: 5000
   field of view: 40
   orthographic: 1
-  orthographic size: 4
+  orthographic size: 10
   m_Depth: -1
   m_CullingMask:
     serializedVersion: 2
@@ -2392,8 +2397,8 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1725523714}
-  m_LocalRotation: {x: -1.7777856e-21, y: 0.0000024514288, z: 1.6082125e-14, w: -1}
-  m_LocalPosition: {x: 0, y: 0.62899995, z: -10}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
@@ -2808,11 +2813,6 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 1666344131}
     m_Modifications:
-    - target: {fileID: 510767651259991744, guid: 2d19c25c0851eef4c9db615a74a3f543,
-        type: 3}
-      propertyPath: m_Name
-      value: Annoyed_NPC
-      objectReference: {fileID: 0}
     - target: {fileID: 510767651259991748, guid: 2d19c25c0851eef4c9db615a74a3f543,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -2932,6 +2932,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_LocalScale.z
       value: 1.25
+      objectReference: {fileID: 0}
+    - target: {fileID: 510767651259991744, guid: 2d19c25c0851eef4c9db615a74a3f543,
+        type: 3}
+      propertyPath: m_Name
+      value: Annoyed_NPC
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 2d19c25c0851eef4c9db615a74a3f543, type: 3}
