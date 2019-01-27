@@ -2,16 +2,20 @@
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
+using UnityEngine.EventSystems;
 
 public class Gato : MonoBehaviour
 {
     public List<NPC> NPCs;
     private NPC npc;
 
+    private bool arranhando = false;
+
     private bool count = false;
     public GameObject cama;
 
     public GameManager gameManager;
+
 
 	public Animator catAnim;
 	public Animator fadeAnimator;
@@ -24,6 +28,14 @@ public class Gato : MonoBehaviour
     Vector3 X;
     public GameObject paineliteracao;
     // Start is called before the first frame update
+
+    void stopAnimation()
+    {
+        catAnim.SetBool("Arranha",false);
+        arranhando = false;
+        
+    }
+    
     void Start()
     {
 
@@ -77,6 +89,7 @@ public class Gato : MonoBehaviour
                 transform.Translate(0, 0, 0);
             }
         }
+        //REFAZER FORA DO UPDATE
         if (paineliteracao.activeSelf)
         {
 			catAnim.SetBool("Walk", false);
@@ -95,10 +108,13 @@ public class Gato : MonoBehaviour
             }
 
             if (Input.GetKeyDown(KeyCode.LeftArrow))
-            {
+            {   
+                if(arranhando == false)
+                {
                 catAnim.SetBool("Arranha",true);
-                WaitForRealSeconds(1);
-                catAnim.SetBool("Arranha",false);
+                Invoke("stopAnimation", 3);
+                }
+                   
                 paineliteracao.SetActive(false);
                 interacao = false;
                 Debug.Log("Negativo");
@@ -118,6 +134,8 @@ public class Gato : MonoBehaviour
             interacao = true;
             Debug.Log("abriu");
         }
+    
+        
 
     }
 
@@ -207,4 +225,6 @@ public class Gato : MonoBehaviour
 			yield return null;
 		}
 	}
+
+     
 }
