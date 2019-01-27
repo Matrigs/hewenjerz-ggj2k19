@@ -12,6 +12,8 @@ public class Stalker : MonoBehaviour
     public float inicioY;
     public float inicioZ;
 
+    public Animator walk;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -28,10 +30,11 @@ public class Stalker : MonoBehaviour
                 if(this.transform.position.x + offset < gato.transform.position.x)
                 {
                      transform.Translate((gato.velocidadeX * Time.deltaTime), 0, 0);
+                     walk.SetBool("Walk",true);
                 }
                 else
                 {
-                    //Animacao idle
+                    walk.SetBool("Walk",false);
                 }
             }
             else 
@@ -39,10 +42,11 @@ public class Stalker : MonoBehaviour
                 if(this.transform.position.x - offset > gato.transform.position.x)
                 {
                     transform.Translate((-gato.velocidadeX * Time.deltaTime), 0, 0);
+                    walk.SetBool("Walk",true);
                 }
                 else
                 {
-                    //Animacao idle
+                    walk.SetBool("Walk",false);
                 }
             }
         }

@@ -14,6 +14,16 @@ public class NPC : MonoBehaviour
     public Stalker gatinho;
     public GameManager gameManager;
     public int karma = 50;
+    public Animator leit;
+    public Animator resmunga;
+    public Animator mia;
+    public Animator acaricia;
+    public Animator acaricia2;
+    public Animator chutar;
+    public Animator afugenta;
+    public Animator arranha;
+    public Animator bate;
+    public Animator veneno;
     // Start is called before the first frame update
     void Start()
     {
@@ -39,25 +49,25 @@ public class NPC : MonoBehaviour
                     }
                     if(this.tag == "Idoso") 
                     {
-                        //Animacao
+                        bate.SetBool("Bate",true);
                     }
                     if(this.tag == "Adolescente") 
                     {
-                        //Animacao
+                        veneno.SetBool("Veneno",true);
                     }
                 else 
                 {
                      if(this.tag == "Gatinho") 
                     {
-                        //O gato pisca
+                        arranha.SetBool("Arranha",true);
                     }
                     if(this.tag == "Idoso") 
                     {
-                        //Animacao
+                        afugenta.SetBool("Afugenta",true);
                     }
                     if(this.tag == "Adolescente") 
                     {
-                        //Animacao
+                        chutar.SetBool("Chutar",true);
                     }
                 }
             }
@@ -76,7 +86,7 @@ public class NPC : MonoBehaviour
                     }
                     if(this.tag == "Idoso") 
                     {
-                        //Animacao
+                        acaricia2.SetBool("Acaricia2", true);
                     }
                     if(this.tag == "Adolescente") 
                     {
@@ -91,11 +101,11 @@ public class NPC : MonoBehaviour
                     }
                     if(this.tag == "Idoso") 
                     {
-                        //Animacao
+                        resmunga.SetBool("Resmunga",true);
                     }
                     if(this.tag == "Adolescente") 
                     {
-                        //Animacao
+                        acaricia.SetBool("Acaricia",true);
                     }
                 }
                 
@@ -109,30 +119,30 @@ public class NPC : MonoBehaviour
                 {
                     if(this.tag == "Gatinho") 
                     {
-                        //Animacao
+                        mia.SetBool("Mia",true);
                     }
                     if(this.tag == "Idoso") 
                     {
-                        //Animacao
+                        resmunga.SetBool("Resmunga", true);
                     }
                     if(this.tag == "Adolescente") 
                     {
-                        //Animacao
+                        
                     }
                 }
                 else 
                 {
                     if(this.tag == "Gatinho") 
                     {
-                        //Animacao
+                        mia.SetBool("Mia",true);
                     }
                     if(this.tag == "Idoso") 
                     {
-                        //Animacao
+                        resmunga.SetBool("Resmunga", true);
                     }
                     if(this.tag == "Adolescente") 
                     {
-                        //Animacao
+                        leit.SetBool("Leite", true);
                     }
                 }
             }

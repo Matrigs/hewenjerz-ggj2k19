@@ -766,6 +766,16 @@ MonoBehaviour:
   gatinho: {fileID: 7777143846682096234}
   gameManager: {fileID: 1425691342}
   karma: 50
+  leit: {fileID: 342604580024862281, guid: d08f71fb8b9766d47a0973dafe848f36, type: 3}
+  resmunga: {fileID: 342604580024862281, guid: d08f71fb8b9766d47a0973dafe848f36, type: 3}
+  mia: {fileID: 0}
+  acaricia: {fileID: 0}
+  acaricia2: {fileID: 0}
+  chutar: {fileID: 0}
+  afugenta: {fileID: 0}
+  arranha: {fileID: 0}
+  bate: {fileID: 0}
+  veneno: {fileID: 0}
 --- !u!114 &1137167678 stripped
 MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 4171245048975512082, guid: f0db0f2a79e2a8f499f97c5ac1fb8b60,
@@ -970,6 +980,8 @@ MonoBehaviour:
   - {fileID: 661510724}
   - {fileID: 903347560}
   - {fileID: 8216980807865936446}
+  Days: []
+  currentCamera: 0
   mudadia: 0
 --- !u!1 &1462556933
 GameObject:
@@ -1972,6 +1984,12 @@ PrefabInstance:
       propertyPath: inicioX
       value: 3.58
       objectReference: {fileID: 0}
+    - target: {fileID: 7777143846895226625, guid: 8f2c044bebabeab4b86773996a8576e1,
+        type: 3}
+      propertyPath: walk
+      value: 
+      objectReference: {fileID: 342604580024862281, guid: d08f71fb8b9766d47a0973dafe848f36,
+        type: 3}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 8f2c044bebabeab4b86773996a8576e1, type: 3}
 --- !u!114 &7777143846682096234 stripped
@@ -2014,6 +2032,16 @@ MonoBehaviour:
   gatinho: {fileID: 0}
   gameManager: {fileID: 1425691342}
   karma: 50
+  leit: {fileID: 0}
+  resmunga: {fileID: 0}
+  mia: {fileID: 0}
+  acaricia: {fileID: 0}
+  acaricia2: {fileID: 0}
+  chutar: {fileID: 0}
+  afugenta: {fileID: 0}
+  arranha: {fileID: 0}
+  bate: {fileID: 0}
+  veneno: {fileID: 0}
 --- !u!65 &8216980807865936447
 BoxCollider:
   m_ObjectHideFlags: 0
