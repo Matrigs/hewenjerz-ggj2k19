@@ -96,6 +96,9 @@ public class Gato : MonoBehaviour
 
             if (Input.GetKeyDown(KeyCode.LeftArrow))
             {
+                catAnim.SetBool("Arranha",true);
+                WaitForRealSeconds(1);
+                catAnim.SetBool("Arranha",false);
                 paineliteracao.SetActive(false);
                 interacao = false;
                 Debug.Log("Negativo");
