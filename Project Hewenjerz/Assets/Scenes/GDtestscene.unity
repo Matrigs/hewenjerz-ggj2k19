@@ -232,6 +232,16 @@ PrefabInstance:
       propertyPath: m_Name
       value: NPCPrefab
       objectReference: {fileID: 0}
+    - target: {fileID: 3287794671954942022, guid: 5e76d882fbfb3bf4ab4b5776562b4cfc,
+        type: 3}
+      propertyPath: gatinho
+      value: 
+      objectReference: {fileID: 1414451556}
+    - target: {fileID: 3287794671954942022, guid: 5e76d882fbfb3bf4ab4b5776562b4cfc,
+        type: 3}
+      propertyPath: gameManager
+      value: 
+      objectReference: {fileID: 1425691342}
     - target: {fileID: 6064267081800160552, guid: 5e76d882fbfb3bf4ab4b5776562b4cfc,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -3032,6 +3042,27 @@ PrefabInstance:
       propertyPath: fadeAnimator
       value: 
       objectReference: {fileID: 791826981}
+    - target: {fileID: 488931173, guid: f0db0f2a79e2a8f499f97c5ac1fb8b60, type: 3}
+      propertyPath: m_Layer
+      value: 9
+      objectReference: {fileID: 0}
+    - target: {fileID: 488931175, guid: f0db0f2a79e2a8f499f97c5ac1fb8b60, type: 3}
+      propertyPath: m_SortingLayerID
+      value: -876595241
+      objectReference: {fileID: 0}
+    - target: {fileID: 488931175, guid: f0db0f2a79e2a8f499f97c5ac1fb8b60, type: 3}
+      propertyPath: m_SortingLayer
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 488931175, guid: f0db0f2a79e2a8f499f97c5ac1fb8b60, type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: 21300000, guid: c071e1a90a5ad6e4aaa65a405ba13388,
+        type: 3}
+    - target: {fileID: 488931175, guid: f0db0f2a79e2a8f499f97c5ac1fb8b60, type: 3}
+      propertyPath: m_Enabled
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 5659767692643978466, guid: f0db0f2a79e2a8f499f97c5ac1fb8b60,
         type: 3}
       propertyPath: m_RootOrder
@@ -3645,27 +3676,6 @@ PrefabInstance:
     - target: {fileID: 5659767693430990753, guid: f0db0f2a79e2a8f499f97c5ac1fb8b60,
         type: 3}
       propertyPath: m_IsActive
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 488931173, guid: f0db0f2a79e2a8f499f97c5ac1fb8b60, type: 3}
-      propertyPath: m_Layer
-      value: 9
-      objectReference: {fileID: 0}
-    - target: {fileID: 488931175, guid: f0db0f2a79e2a8f499f97c5ac1fb8b60, type: 3}
-      propertyPath: m_SortingLayerID
-      value: -876595241
-      objectReference: {fileID: 0}
-    - target: {fileID: 488931175, guid: f0db0f2a79e2a8f499f97c5ac1fb8b60, type: 3}
-      propertyPath: m_SortingLayer
-      value: 2
-      objectReference: {fileID: 0}
-    - target: {fileID: 488931175, guid: f0db0f2a79e2a8f499f97c5ac1fb8b60, type: 3}
-      propertyPath: m_Sprite
-      value: 
-      objectReference: {fileID: 21300000, guid: c071e1a90a5ad6e4aaa65a405ba13388,
-        type: 3}
-    - target: {fileID: 488931175, guid: f0db0f2a79e2a8f499f97c5ac1fb8b60, type: 3}
-      propertyPath: m_Enabled
       value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []

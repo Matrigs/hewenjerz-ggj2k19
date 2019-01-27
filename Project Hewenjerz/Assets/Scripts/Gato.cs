@@ -75,48 +75,57 @@ public class Gato : MonoBehaviour
             {
                 catAnim.SetBool("Walk", false);
                 transform.Translate(0, 0, 0);
+				DesativaAnim ();
             }
         }
-        if (paineliteracao.activeSelf)
-        {
-			catAnim.SetBool("Walk", false);
-            if (Input.GetKeyDown(KeyCode.DownArrow))
-            {
-                paineliteracao.SetActive(false);
-                interacao = false;
-                Debug.Log("Fechou");
-            }
 
-            if (Input.GetKeyDown(KeyCode.UpArrow))
-            {
-                paineliteracao.SetActive(false);
-                interacao = false;
-                Debug.Log("Neutro");
-            }
-
-            if (Input.GetKeyDown(KeyCode.LeftArrow))
-            {
-                paineliteracao.SetActive(false);
-                interacao = false;
-                Debug.Log("Negativo");
-            }
-
-            if (Input.GetKeyDown(KeyCode.RightArrow))
-            {
-                paineliteracao.SetActive(false);
-                interacao = false;
-                Debug.Log("Positivo");
-            }
-        }
-        
-        else if (Input.GetKeyDown(KeyCode.DownArrow) && camab == false )
-        {
-            paineliteracao.SetActive(true);
-            interacao = true;
-            Debug.Log("abriu");
-        }
-
+			
     }
+
+	private void DesativaAnim()
+	{
+		if (paineliteracao.activeSelf)
+		{
+			catAnim.SetBool("Walk", false);
+			if (Input.GetKeyDown(KeyCode.DownArrow))
+			{
+				paineliteracao.SetActive(false);
+				interacao = false;
+				Debug.Log("Fechou");
+			}
+
+			if (Input.GetKeyDown(KeyCode.UpArrow))
+			{
+				catAnim.SetTrigger("Miau");
+				paineliteracao.SetActive(false);
+				interacao = false;
+				Debug.Log("Neutro");
+			}
+
+			if (Input.GetKeyDown(KeyCode.LeftArrow))
+			{
+				catAnim.SetTrigger("Arranha");
+				paineliteracao.SetActive(false);
+				interacao = false;
+				Debug.Log("Negativo");
+			}
+
+			if (Input.GetKeyDown(KeyCode.RightArrow))
+			{
+				catAnim.SetTrigger("Ronron");
+				paineliteracao.SetActive(false);
+				interacao = false;
+				Debug.Log("Positivo");
+			}
+		}
+
+		else if (Input.GetKeyDown(KeyCode.DownArrow) && camab == false )
+		{
+			paineliteracao.SetActive(true);
+			interacao = true;
+			Debug.Log("abriu");
+		}
+	}
 
     private void OnTriggerStay(Collider other)
     {
@@ -161,6 +170,7 @@ public class Gato : MonoBehaviour
             }
             npc = null;
         }
+
         if(cama.name == other.name) 
         {
             camab = true;
