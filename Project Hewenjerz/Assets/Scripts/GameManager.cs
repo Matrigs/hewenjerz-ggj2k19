@@ -96,7 +96,7 @@ public class GameManager : MonoBehaviour
             mudadia = false;
             if(dia >= fim) 
             {
-				camerAnim.SetBool ("Clear", true);
+				//camerAnim.SetBool ("Clear", true);
                 Debug.Log("FIM");
             }
         }
