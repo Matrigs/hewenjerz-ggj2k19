@@ -1,8 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-using UnityEngine.UI;
-using UnityEngine.EventSystems;
+using UnityEngine.SceneManagement;
 
 public class GameManager : MonoBehaviour
 {
@@ -14,10 +13,6 @@ public class GameManager : MonoBehaviour
     public List<NPC> NPCs;
 	public List<GameObject> Days;
 	public int currentCamera = 0;
-    
-    public static float timeScale;
-
-    public GameObject pauseMenu;
 
     public bool mudadia = false;
     // Start is called before the first frame update
@@ -27,18 +22,8 @@ public class GameManager : MonoBehaviour
     }
 
     // Update is called once per frame
-    public void SetTimescale(float timescale)
-    {
-        Time.timeScale = timescale;
-    }
     void Update()
     {
-        if(Input.GetKey(KeyCode.Escape))
-        {
-            pauseMenu.SetActive(true);
-            SetTimescale(0f);
-
-        }
         if(mudadia == true)
         {
             dia++;
@@ -47,7 +32,6 @@ public class GameManager : MonoBehaviour
 			Days [currentCamera].SetActive (true);
             foreach(NPC n in NPCs)
             {
-                
                 if(n.karma >= n.limitBom)
                 {
                     Debug.Log(n.name+" BOM");
@@ -113,7 +97,8 @@ public class GameManager : MonoBehaviour
             mudadia = false;
             if(dia >= fim) 
             {
-				camerAnim.SetBool ("Clear", true);
+				//camerAnim.SetBool ("Clear", true);
+				SceneManager.LoadScene("Credits");
                 Debug.Log("FIM");
             }
         }
