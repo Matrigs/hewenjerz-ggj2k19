@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class GameManager : MonoBehaviour
 {
@@ -97,6 +98,7 @@ public class GameManager : MonoBehaviour
             if(dia >= fim) 
             {
 				//camerAnim.SetBool ("Clear", true);
+				SceneManager.LoadScene("Credits");
                 Debug.Log("FIM");
             }
         }
