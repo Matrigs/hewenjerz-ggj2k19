@@ -551,6 +551,11 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 5517280041362985942, guid: 1fd5c074bb59be14b9c1667c2a779134,
+        type: 3}
+      propertyPath: m_IsTrigger
+      value: 1
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 1fd5c074bb59be14b9c1667c2a779134, type: 3}
 --- !u!224 &621820519 stripped
@@ -1680,6 +1685,27 @@ PrefabInstance:
       propertyPath: NPCs.Array.data[0]
       value: 
       objectReference: {fileID: 661510724}
+    - target: {fileID: 488931173, guid: f0db0f2a79e2a8f499f97c5ac1fb8b60, type: 3}
+      propertyPath: m_Layer
+      value: 9
+      objectReference: {fileID: 0}
+    - target: {fileID: 488931175, guid: f0db0f2a79e2a8f499f97c5ac1fb8b60, type: 3}
+      propertyPath: m_SortingLayerID
+      value: -876595241
+      objectReference: {fileID: 0}
+    - target: {fileID: 488931175, guid: f0db0f2a79e2a8f499f97c5ac1fb8b60, type: 3}
+      propertyPath: m_SortingLayer
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 488931175, guid: f0db0f2a79e2a8f499f97c5ac1fb8b60, type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: 21300000, guid: c071e1a90a5ad6e4aaa65a405ba13388,
+        type: 3}
+    - target: {fileID: 488931175, guid: f0db0f2a79e2a8f499f97c5ac1fb8b60, type: 3}
+      propertyPath: m_Enabled
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 5659767692643978466, guid: f0db0f2a79e2a8f499f97c5ac1fb8b60,
         type: 3}
       propertyPath: m_RootOrder
@@ -2293,27 +2319,6 @@ PrefabInstance:
     - target: {fileID: 5659767693430990753, guid: f0db0f2a79e2a8f499f97c5ac1fb8b60,
         type: 3}
       propertyPath: m_IsActive
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 488931173, guid: f0db0f2a79e2a8f499f97c5ac1fb8b60, type: 3}
-      propertyPath: m_Layer
-      value: 9
-      objectReference: {fileID: 0}
-    - target: {fileID: 488931175, guid: f0db0f2a79e2a8f499f97c5ac1fb8b60, type: 3}
-      propertyPath: m_SortingLayerID
-      value: -876595241
-      objectReference: {fileID: 0}
-    - target: {fileID: 488931175, guid: f0db0f2a79e2a8f499f97c5ac1fb8b60, type: 3}
-      propertyPath: m_SortingLayer
-      value: 2
-      objectReference: {fileID: 0}
-    - target: {fileID: 488931175, guid: f0db0f2a79e2a8f499f97c5ac1fb8b60, type: 3}
-      propertyPath: m_Sprite
-      value: 
-      objectReference: {fileID: 21300000, guid: c071e1a90a5ad6e4aaa65a405ba13388,
-        type: 3}
-    - target: {fileID: 488931175, guid: f0db0f2a79e2a8f499f97c5ac1fb8b60, type: 3}
-      propertyPath: m_Enabled
       value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
